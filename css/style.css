@@ -1,0 +1,133 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: cornflowerblue;
+}
+.greeting {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    animation: fadeOut 1s 4s forwards, swipeUp 1s 2.5s forwards;
+}
+
+.greeting-text {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Main content styling */
+.main-content {
+    animation: fadeInContent 1s ease-out 2.5s forwards;
+}
+
+/* Fade-in text in preloader */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Fade-out preloader */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Bubble swipe up animation for preloader */
+@keyframes swipeUp {
+    0% {
+        transform: translateY(0);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    80%,
+    100% {
+        transform: translateY(-100%);
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+}
+
+/* Fade-in and scroll-up main content */
+@keyframes fadeInContent {
+    0% {
+        transform: translateY(200px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+div.f-color{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 15px;
+
+h2{
+    font-size: 35px;
+    color: #fff;
+}
+input{
+    font-size: 30px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+button{
+    font-size: 25px;
+    border-radius: 50px;
+    background-color: green;
+    color: white;
+    border: none;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.7s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+button:hover{
+    background-color: #111;
+}
+p#message{
+    font-size: 20px;
+}
+.success{
+    color: white;
+}
+.error{
+    color: red;
+}
+}
